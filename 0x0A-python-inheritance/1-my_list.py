@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-"""
-contains the MyList class
-"""
+"""This module defines a file-writing function."""
 
 
-class MyList(list):
-    """a subclass of list"""
-    def __init__(self):
-        """initializes the object"""
-        super().__init__()
-
-    def print_sorted(self):
-        """prints the sorted list"""
-        print(sorted(self))
+def write_file(filename="", text=""):
+    """Writes a string to a UTF8 text file
+    """
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
